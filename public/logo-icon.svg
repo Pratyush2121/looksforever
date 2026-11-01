@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <rect width="120" height="120" rx="24" fill="#0A3982"/>
+  <defs>
+    <linearGradient id="icGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3891F4" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#1455B4" />
+    </linearGradient>
+  </defs>
+  <g transform="translate(15, 20) scale(0.35)">
+    <path d="M 0,15 C 110,60 160,110 115,185 C 195,120 180,60 100,28 Z" fill="url(#icGrad)" />
+    <path d="M 100,28 C 170,62 205,105 185,170 C 245,115 230,62 175,34 Z" fill="#93C5FD" />
+    <path d="M 175,34 C 230,65 260,100 240,152 C 290,110 275,65 235,42 Z" fill="#DBEAFE" />
+  </g>
+  <text x="60" y="102" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="14" letter-spacing="2" fill="#FFFFFF">LF</text>
+</svg>

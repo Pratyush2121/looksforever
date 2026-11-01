@@ -1,0 +1,22 @@
+{
+  "name": "Looks Forever Hair Aesthetic Clinic",
+  "short_name": "Looks Forever",
+  "description": "Award-Winning Non-Surgical Hair Replacement, Patches & Aesthetic Clinic, Noida",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#1455B4",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "start_url": "/"
+}
+

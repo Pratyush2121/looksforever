@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="lfSwoosh1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3891F4" />
+      <stop offset="45%" stop-color="#A8D5FE" />
+      <stop offset="55%" stop-color="#0E48A0" />
+      <stop offset="100%" stop-color="#003580" />
+    </linearGradient>
+    <linearGradient id="lfSwoosh2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2575FC" />
+      <stop offset="45%" stop-color="#B8DCFE" />
+      <stop offset="55%" stop-color="#0A3982" />
+      <stop offset="100%" stop-color="#002255" />
+    </linearGradient>
+    <linearGradient id="lfSwoosh3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E65D8" />
+      <stop offset="45%" stop-color="#CBE5FE" />
+      <stop offset="55%" stop-color="#082A66" />
+      <stop offset="100%" stop-color="#001840" />
+    </linearGradient>
+  </defs>
+
+  <!-- Top 3 Swooshes -->
+  <g transform="translate(190, 10)">
+    <!-- Main Left Swoosh -->
+    <path d="M 0,15 C 110,60 160,110 115,185 C 195,120 180,60 100,28 Z" fill="url(#lfSwoosh1)" />
+    <!-- Middle Swoosh -->
+    <path d="M 100,28 C 170,62 205,105 185,170 C 245,115 230,62 175,34 Z" fill="url(#lfSwoosh2)" />
+    <!-- Right Swoosh -->
+    <path d="M 175,34 C 230,65 260,100 240,152 C 290,110 275,65 235,42 Z" fill="url(#lfSwoosh3)" />
+  </g>
+
+  <!-- LOOKS FOREVER Text -->
+  <text x="380" y="235" 
+        text-anchor="middle" 
+        font-family="'Playfair Display', Georgia, 'Times New Roman', serif" 
+        font-weight="900" 
+        font-size="68" 
+        letter-spacing="5" 
+        fill="#084298">LOOKS FOREVER</text>
+
+  <!-- 4 Sub-Badges: HAIR | SKIN | LASER | SLIMMING -->
+  <g transform="translate(20, 255)">
+    <!-- HAIR -->
+    <rect x="0" y="0" width="165" height="48" rx="3" fill="#084298" />
+    <text x="82.5" y="33" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="22" letter-spacing="3" fill="#FFFFFF">HAIR</text>
+
+    <!-- SKIN -->
+    <rect x="185" y="0" width="165" height="48" rx="3" fill="#084298" />
+    <text x="267.5" y="33" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="22" letter-spacing="3" fill="#FFFFFF">SKIN</text>
+
+    <!-- LASER -->
+    <rect x="370" y="0" width="165" height="48" rx="3" fill="#084298" />
+    <text x="452.5" y="33" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="22" letter-spacing="3" fill="#FFFFFF">LASER</text>
+
+    <!-- SLIMMING -->
+    <rect x="555" y="0" width="165" height="48" rx="3" fill="#084298" />
+    <text x="637.5" y="33" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" letter-spacing="2" fill="#FFFFFF">SLIMMING</text>
+  </g>
+</svg>
