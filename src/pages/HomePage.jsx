@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
 import WhyChoose from '../components/WhyChoose';
+import CelebrityAwards from '../components/CelebrityAwards';
 import ProductCard from '../components/ProductCard';
 import { 
   Sparkles, 
@@ -997,6 +998,9 @@ export default function HomePage({
 
         </div>
       </section>
+
+      {/* Celebrity Awards & National Accolades */}
+      <CelebrityAwards awards={homepageSettings?.awards} />
 
       {/* 9. Featured Products Catalog Preview (2-col mobile, 4/5 cards) */}
       <section id="featured-systems" className="py-16 sm:py-24 bg-white border-b border-slate-200/80">
