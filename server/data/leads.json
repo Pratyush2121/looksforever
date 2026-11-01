@@ -1,5 +1,25 @@
 [
   {
+    "id": "LF-LEAD-478630",
+    "name": "Pooja Kashyap",
+    "phone": "+91 98112 34567",
+    "city": "Noida Sector 18",
+    "service": "Silk-Base Crown Hair Topper",
+    "requirement": "Need sizing demo appointment.",
+    "preferredTime": "Anytime",
+    "source": "Website Contact Form",
+    "priority": "HIGH",
+    "status": "NEW",
+    "createdAt": "2026-11-01T00:21:18.629Z",
+    "notes": [
+      {
+        "date": "2026-11-01T00:21:18.629Z",
+        "author": "System",
+        "text": "Captured locally."
+      }
+    ]
+  },
+  {
     "id": "LF-LEAD-191940",
     "name": "Pooja Kashyap",
     "phone": "+91 98112 34567",

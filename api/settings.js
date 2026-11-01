@@ -1,6 +1,6 @@
-import { connectToDatabase, isDbConnected } from './lib/db.js';
-import { Setting } from './lib/models.js';
-import { requireAdmin } from './lib/auth.js';
+import { connectToDatabase, isDbConnected } from '../lib/db.js';
+import { Setting } from '../lib/models.js';
+import { requireAdmin } from '../lib/auth.js';
 import { SITE_CONFIG, CELEBRITY_AWARDS } from '../src/config/siteConfig.js';
 
 // Default initial section seeds

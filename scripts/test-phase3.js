@@ -1,5 +1,5 @@
-import { hashPassword, comparePassword, signToken, verifyToken } from '../api/lib/auth.js';
-import { generateSlug, validateSchema, ProductSchemaZod, ContactSchemaZod } from '../api/lib/validate.js';
+import { hashPassword, comparePassword, signToken, verifyToken } from '../lib/auth.js';
+import { generateSlug, validateSchema, ProductSchemaZod, ContactSchemaZod } from '../lib/validate.js';
 import productsHandler from '../api/products.js';
 import categoriesHandler from '../api/categories.js';
 import offersHandler from '../api/offers.js';

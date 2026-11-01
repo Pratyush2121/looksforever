@@ -1,7 +1,7 @@
-import { connectToDatabase, isDbConnected } from './lib/db.js';
-import { Offer } from './lib/models.js';
-import { requireAdmin } from './lib/auth.js';
-import { validateSchema, OfferSchemaZod } from './lib/validate.js';
+import { connectToDatabase, isDbConnected } from '../lib/db.js';
+import { Offer } from '../lib/models.js';
+import { requireAdmin } from '../lib/auth.js';
+import { validateSchema, OfferSchemaZod } from '../lib/validate.js';
 
 export default async function handler(req, res) {
   let dbAvailable = false;

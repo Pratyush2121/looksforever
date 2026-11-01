@@ -1,8 +1,8 @@
-import { connectToDatabase, isDbConnected } from './lib/db.js';
-import { Blog } from './lib/models.js';
-import { requireAdmin } from './lib/auth.js';
-import { validateSchema, BlogSchemaZod, generateSlug } from './lib/validate.js';
-import { sanitizeHtml } from './lib/sanitize.js';
+import { connectToDatabase, isDbConnected } from '../lib/db.js';
+import { Blog } from '../lib/models.js';
+import { requireAdmin } from '../lib/auth.js';
+import { validateSchema, BlogSchemaZod, generateSlug } from '../lib/validate.js';
+import { sanitizeHtml } from '../lib/sanitize.js';
 
 export default async function handler(req, res) {
   let dbAvailable = false;

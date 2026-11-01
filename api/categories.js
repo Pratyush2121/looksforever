@@ -1,7 +1,7 @@
-import { connectToDatabase, isDbConnected } from './lib/db.js';
-import { Category } from './lib/models.js';
-import { requireAdmin } from './lib/auth.js';
-import { validateSchema, CategorySchemaZod, generateSlug } from './lib/validate.js';
+import { connectToDatabase, isDbConnected } from '../lib/db.js';
+import { Category } from '../lib/models.js';
+import { requireAdmin } from '../lib/auth.js';
+import { validateSchema, CategorySchemaZod, generateSlug } from '../lib/validate.js';
 import { CATEGORIES } from '../src/config/siteConfig.js';
 
 export default async function handler(req, res) {

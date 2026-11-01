@@ -1,5 +1,5 @@
-import { connectToDatabase, isDbConnected } from './lib/db.js';
-import { Product, Category, Blog } from './lib/models.js';
+import { connectToDatabase, isDbConnected } from '../lib/db.js';
+import { Product, Category, Blog } from '../lib/models.js';
 
 export default async function handler(req, res) {
   let dbAvailable = false;

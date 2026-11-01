@@ -1,5 +1,5 @@
-import { connectToDatabase } from '../lib/db.js';
-import { Admin } from '../lib/models.js';
+import { connectToDatabase } from '../../lib/db.js';
+import { Admin } from '../../lib/models.js';
 import {
   hashPassword,
   comparePassword,
@@ -9,8 +9,8 @@ import {
   requireAdmin,
   checkLoginRateLimit,
   recordLoginAttempt,
-} from '../lib/auth.js';
-import { validateSchema, LoginSchemaZod } from '../lib/validate.js';
+} from '../../lib/auth.js';
+import { validateSchema, LoginSchemaZod } from '../../lib/validate.js';
 
 export default async function handler(req, res) {
   // Support both dynamic route /api/auth/[action] and query param ?action=

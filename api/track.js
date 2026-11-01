@@ -1,6 +1,6 @@
-import { connectToDatabase, isDbConnected } from './lib/db.js';
-import { AnalyticsEvent, Product } from './lib/models.js';
-import { requireAdmin } from './lib/auth.js';
+import { connectToDatabase, isDbConnected } from '../lib/db.js';
+import { AnalyticsEvent, Product } from '../lib/models.js';
+import { requireAdmin } from '../lib/auth.js';
 import crypto from 'crypto';
 
 // Quick bot detection filter

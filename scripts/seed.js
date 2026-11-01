@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
-import { Product, Category, Setting, Offer, Blog, Admin } from '../api/lib/models.js';
-import { hashPassword } from '../api/lib/auth.js';
-import { generateSlug } from '../api/lib/validate.js';
+import { Product, Category, Setting, Offer, Blog, Admin } from '../lib/models.js';
+import { hashPassword } from '../lib/auth.js';
+import { generateSlug } from '../lib/validate.js';
 import { CATEGORIES, CELEBRITY_AWARDS, SITE_CONFIG } from '../src/config/siteConfig.js';
 
 dotenv.config();

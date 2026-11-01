@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import { Admin } from '../api/lib/models.js';
-import { hashPassword } from '../api/lib/auth.js';
+import { Admin } from '../lib/models.js';
+import { hashPassword } from '../lib/auth.js';
 
 dotenv.config();
 

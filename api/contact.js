@@ -1,7 +1,7 @@
-import { connectToDatabase, isDbConnected } from './lib/db.js';
-import { ContactSubmission } from './lib/models.js';
-import { requireAdmin } from './lib/auth.js';
-import { validateSchema, ContactSchemaZod } from './lib/validate.js';
+import { connectToDatabase, isDbConnected } from '../lib/db.js';
+import { ContactSubmission } from '../lib/models.js';
+import { requireAdmin } from '../lib/auth.js';
+import { validateSchema, ContactSchemaZod } from '../lib/validate.js';
 import fs from 'fs';
 import path from 'path';
 
