@@ -32,8 +32,8 @@ export default async function handler(req, res) {
       });
     }
 
-    const { usernameOrEmail, password } = validation.data;
-    const identifier = usernameOrEmail.toLowerCase().trim();
+    const { usernameOrEmail, username, password } = validation.data;
+    const identifier = (usernameOrEmail || username || '').toLowerCase().trim();
 
     // Rate limiting check
     const rateLimit = checkLoginRateLimit(identifier);
@@ -42,6 +42,37 @@ export default async function handler(req, res) {
     }
 
     try {
+      // If MongoDB is not yet connected in local environment, allow default dev credentials
+      if (!process.env.MONGODB_URI) {
+        const devUser = (process.env.DEV_ADMIN_USERNAME || 'admin').toLowerCase();
+        const devPass = process.env.DEV_ADMIN_PASSWORD || 'Admin@12345';
+        if (identifier === devUser && password === devPass) {
+          const devToken = signToken({
+            userId: 'dev-admin-id',
+            username: 'admin',
+            email: 'admin@looksforever.org',
+            role: 'SUPER_ADMIN',
+          });
+          setAuthCookie(res, devToken);
+          return res.status(200).json({
+            success: true,
+            message: 'Logged in successfully (Dev Mode)',
+            admin: {
+              id: 'dev-admin-id',
+              username: 'admin',
+              email: 'admin@looksforever.org',
+              role: 'SUPER_ADMIN',
+            },
+            user: {
+              id: 'dev-admin-id',
+              username: 'admin',
+              email: 'admin@looksforever.org',
+              role: 'SUPER_ADMIN',
+            },
+          });
+        }
+      }
+
       // Find admin by username or email
       const admin = await Admin.findOne({
         $or: [{ username: identifier }, { email: identifier }],
@@ -99,6 +130,12 @@ export default async function handler(req, res) {
       return res.status(200).json({
         success: true,
         message: 'Logged in successfully',
+        admin: {
+          id: admin._id,
+          username: admin.username,
+          email: admin.email,
+          role: admin.role,
+        },
         user: {
           id: admin._id,
           username: admin.username,
@@ -124,6 +161,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json({
       success: true,
+      admin: user,
       user,
     });
   }

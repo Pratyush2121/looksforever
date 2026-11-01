@@ -110,6 +110,10 @@ export const ContactSchemaZod = z.object({
 });
 
 export const LoginSchemaZod = z.object({
-  usernameOrEmail: z.string().min(3, 'Username or Email is required'),
-  password: z.string().min(6, 'Password must be at least 6 characters'),
+  usernameOrEmail: z.string().optional(),
+  username: z.string().optional(),
+  password: z.string().min(1, 'Password is required'),
+}).refine(data => Boolean(data.usernameOrEmail || data.username), {
+  message: 'Username or Email is required',
+  path: ['usernameOrEmail']
 });

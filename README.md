@@ -65,3 +65,4 @@ Deploy directly to Vercel in one click:
 vercel
 ```
 Ensure you set `MONGODB_URI` and `JWT_SECRET` in your Vercel Project Environment Variables.
+

@@ -30,7 +30,7 @@ export function AdminAuthProvider({ children }) {
     const res = await fetch('/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password })
+      body: JSON.stringify({ username, usernameOrEmail: username, password })
     });
 
     const data = await res.json();
@@ -38,8 +38,9 @@ export function AdminAuthProvider({ children }) {
       throw new Error(data.error || 'Login failed');
     }
 
-    setAdmin(data.admin);
-    return data.admin;
+    const adminUser = data.admin || data.user;
+    setAdmin(adminUser);
+    return adminUser;
   };
 
   const logout = async () => {
